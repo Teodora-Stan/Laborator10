@@ -1,6 +1,8 @@
 
 package ro.pub.cs.systems.eim.lab10.siplinphone
 
+import android.Manifest
+import android.content.pm.PackageManager
 import android.widget.*
 import android.os.Bundle
 import android.view.View
@@ -8,6 +10,8 @@ import androidx.appcompat.app.AppCompatActivity
 import org.linphone.core.*
 
 class MainActivity: AppCompatActivity() {
+    private lateinit var core: Core
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_activity)
