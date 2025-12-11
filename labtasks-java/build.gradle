@@ -3,13 +3,13 @@ plugins {
 }
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion 36
     buildToolsVersion "30.0.3"
 
     defaultConfig {
         applicationId "ro.pub.cs.systems.eim.lab10.siplinphone.labtasks.java"
-        minSdkVersion 23
-        targetSdkVersion 30
+        minSdkVersion 26
+        targetSdkVersion 36
         versionCode 1
         versionName "1.0"
     }
@@ -28,8 +28,8 @@ android {
 }
 
 dependencies {
-    implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.appcompat:appcompat:1.7.1'
+    implementation 'com.google.android.material:material:1.13.0'
     implementation 'org.linphone:linphone-sdk-android:5.0+'
-    implementation 'androidx.media:media:1.2.0'
+    implementation 'androidx.media:media:1.7.1'
 }

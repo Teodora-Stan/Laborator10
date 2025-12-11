@@ -3,13 +3,13 @@ plugins {
 }
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion 36
     buildToolsVersion "30.0.3"
 
     defaultConfig {
         applicationId "ro.pub.cs.systems.eim.lab10.siplinphone.solutions.java"
-        minSdkVersion 23
-        targetSdkVersion 30
+        minSdkVersion 26
+        targetSdkVersion 36
         versionCode 1
         versionName "1.0"
 
@@ -39,8 +39,17 @@ repositories {
 }
 
 dependencies {
-    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.appcompat:appcompat:1.7.1'
     implementation 'com.google.android.material:material:1.2.1'
     implementation(name:'linphone-sdk-android-5.3.96', ext:'aar')
-    implementation 'androidx.media:media:1.2.0'
+    implementation 'androidx.media:media:1.7.1'
+    
+    // Exclude conflicting Kotlin stdlib versions
+    configurations.all {
+        exclude group: 'org.jetbrains.kotlin', module: 'kotlin-stdlib-jdk8'
+        resolutionStrategy {
+            force 'org.jetbrains.kotlin:kotlin-stdlib:1.9.0'
+            force 'org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.0'
+        }
+    }
 }
