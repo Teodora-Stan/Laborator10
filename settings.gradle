@@ -1,0 +1,5 @@
+rootProject.name = "Laborator10"
+include ':labtasks-kotlin'
+include ':labtasks-java'
+include ':solutions-kotlin'
+include ':solutions-java'
