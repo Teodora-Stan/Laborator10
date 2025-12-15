@@ -76,6 +76,7 @@ class MainActivity:  AppCompatActivity() {
         setContentView(R.layout.main_activity)
         val factory = Factory.instance()
         core = factory.createCore(null, null, this)
+        core.setIpv6Enabled(false)
 
         findViewById<Button>(R.id.register).setOnClickListener {
             it.isEnabled = !login()

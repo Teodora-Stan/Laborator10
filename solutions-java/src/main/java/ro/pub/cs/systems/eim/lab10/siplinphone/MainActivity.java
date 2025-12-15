@@ -78,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
 
         Factory factory = Factory.instance();
         core = factory.createCore(null, null, this);
+        core.setIpv6Enabled(false);
 
         findViewById(R.id.register).setOnClickListener(v -> v.setEnabled(!login()));
 
